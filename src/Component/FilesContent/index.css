@@ -1,0 +1,19 @@
+.title{
+    padding: 4px;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.file_content{
+    margin: 0.8vw;
+}
+
+.no-data {  
+    min-height: 8vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #00203F;
+    background-color: #ADEFD1;
+}
