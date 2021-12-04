@@ -20,4 +20,18 @@ module.exports = {
         var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
         return time;
     }),
+
+    loader: {
+        LOADING: 1,
+        COMPLETED: 0
+    },
+
+    // getFilesList : async () => {
+
+    //     ipcRenderer.send("get-current-directory-files");
+
+    //     ipcRenderer.on('reply-current-directory-files', (event, files) => {
+    //         return files;
+    //     })
+    // }
 }

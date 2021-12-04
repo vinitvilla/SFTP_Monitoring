@@ -1,0 +1,44 @@
+Windows application Move the files from one SFTP server to another one and log it.
+
+
+Windows application 
+    Cross platform desktop application
+        Electron.js 
+    Better UI usability
+        React.js
+        HTML, CSS
+
+    SFTP Connections
+        node.js -> npm packages
+
+    Work Flow
+        0. Create a connection through the npm package with the credentials given.
+        1. Display the current files present at the movement
+        2. Display the moved files on particular date that mentioned in the filter. (fetch from DB)
+        3. To move a file,
+            3.1. Download the file from current connection to local directory
+            3.2. Connect to the destination sftp server
+            3.3. Upload the file from the local directory to the server.
+            3.4. Log the process. (Current server host with port, user, time, file name, destination server host with port)
+            3.5. Delete the file from the local directory and current sftp server.
+        
+
+    Problem Statement
+        1. AUTOMATE: Moving files from one SFTP file server to another based on certain criteria and log it.
+        2. Required a connection credentials every time for the sending sftp connection. (if the username/ password changed)
+        3. Two files with the same name can occur. [one after moving other]
+        
+
+    Database
+        Based on Logged-in SFTP server
+            Create/ get the database name from the MAIN_SFTP_DB Mapping Database.
+            Connect it to the fetched database
+            Moved_files: {
+                filename,
+                host:port,
+                username,
+                updated_time,
+                destination_host:port
+            }
+
+            
